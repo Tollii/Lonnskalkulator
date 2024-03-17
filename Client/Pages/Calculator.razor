@@ -1,0 +1,74 @@
+﻿@page "/Calculator"
+@using BlazorBasic.Salary
+
+<!--
+// v0 by Vercel.
+// https://v0.dev/t/efMiVMXqwhz
+-->
+<div class="w-full py-12 flex flex-col items-center space-y-6">
+    <div class="w-full max-w-3xl px-4">
+        <div class="flex flex-col gap-4">
+            <div class="bg-white  border border-gray-200  shadow sm:rounded-lg w-full">
+                <div class="p-6 flex flex-col gap-4">
+                    <h2 class="text-lg font-medium sm:text-xl lg:text-2xl xl:text-3xl">Salary Calculator</h2>
+                    <div class="grid grid-cols-1 gap-2">
+                        <div class="flex items-center justify-between py-2 border-t border-gray-200">
+                            <label for="yearly" class="text-sm text-gray-500 ">Monthly</label>
+                            <div class="text-sm font-medium">
+                                NOK
+                                <input id="yearly" type="number" @bind="Salary.Yearly" @bind:event="oninput" class="text-sm font-medium w-24">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
+                            <label for="monthly" class="text-sm text-gray-500 ">Monthly</label>
+                            <div class="text-sm font-medium">
+                                NOK
+                                <input id="monthly" type="number" @bind="Salary.Monthly" @bind:event="oninput" class="text-sm font-medium w-24">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
+                            <label for="weekly" class="text-sm text-gray-500 ">Weekly</label>
+                            <div class="text-sm font-medium">
+                                NOK
+                                <input id="weekly" type="number" @bind="Salary.Weekly" @bind:event="oninput" class="text-sm font-medium w-24">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
+                            <label for="daily" class="text-sm text-gray-500 ">Daily</label>
+                            <div class="text-sm font-medium">
+                                NOK
+                                <input id="daily" type="number" @bind="Salary.Daily" @bind:event="oninput" class="text-sm font-medium w-24">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
+                            <div class="text-sm text-gray-500 ">Hourly</div>
+                            <div class="text-sm font-medium">
+                                NOK
+                                <input type="number" @bind="Salary.Hourly" @bind:event="oninput" class="text-sm font-medium w-24">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
+                            <label for="by-minute" class="text-sm text-gray-500 ">By Minute</label>
+                            <div id="by-minute" class="text-sm font-medium">
+                                NOK
+                                <input type="number" @bind="Salary.ByMinute" @bind:event="oninput" class="text-sm font-medium w-24">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
+                            <label for="by-second" class="text-sm text-gray-500 ">By Second</label>
+                            <div class="text-sm font-medium">
+                                NOK
+                                <input id="by-second" type="number" @bind="Salary.BySecond" @bind:event="oninput" class="text-sm font-medium w-24">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    private Salary Salary { get; } = new(550000);
+}
