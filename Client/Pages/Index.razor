@@ -1,5 +1,6 @@
 ﻿@page "/"
 @using BlazorBasic.Salary
+
 <div class="w-full py-12 flex flex-col items-center space-y-6">
     <div class="w-full max-w-3xl px-4">
         <div class="flex flex-col gap-4">
@@ -11,7 +12,7 @@
                             <label for="yearly" class="text-sm text-gray-500 ">Yearly</label>
                             <div class="text-sm font-medium bg-gray-100 p-2 rounded-md">
                                 NOK
-                                <input  id="yearly" type="number" @bind="Salary.Yearly" @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
+                                <input  id="yearly" type="number" @bind="Salary.Yearly"  @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
                                 <br/>
                                 @if (Salary.TaxRatePercent > 0)
                                 {
