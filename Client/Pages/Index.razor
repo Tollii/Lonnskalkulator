@@ -6,22 +6,22 @@
         <div class="flex flex-col gap-4">
             <div class="bg-white  border border-gray-200  shadow sm:rounded-lg w-full">
                 <div class="p-6 flex flex-col gap-4">
-                    <h2 class="text-lg font-medium sm:text-xl lg:text-2xl xl:text-3xl">Salary Calculator</h2>
+                    <h2 class="text-lg font-medium sm:text-xl lg:text-2xl xl:text-3xl">Lønnskalklkulator</h2>
                     <div class="grid grid-cols-1 gap-2">
                         <div class="flex items-center justify-between py-2 border-t border-gray-200">
-                            <label for="yearly" class="text-sm text-gray-500 ">Yearly</label>
+                            <label for="yearly" class="text-sm text-gray-500 ">Årslønn</label>
                             <div class="text-sm font-medium bg-gray-100 p-2 rounded-md">
                                 NOK
                                 <input  id="yearly" type="number" @bind="Salary.Yearly"  @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
                                 <br/>
                                 @if (Salary.TaxRatePercent > 0)
                                 {
-                                    <small class="text-sm text-gray-500"><i>@Salary.YearlyAfterTax after tax</i></small>
+                                    <small class="text-sm text-gray-500"><i>@Salary.YearlyAfterTax etter skatt</i></small>
                                 }
                             </div>
                         </div>
                         <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
-                            <label for="monthly" class="text-sm text-gray-500 ">Monthly</label>
+                            <label for="monthly" class="text-sm text-gray-500 ">Månedslønn</label>
                             <div class="text-sm font-medium bg-gray-100 p-2 rounded-md">
                                 NOK
                                 <input  id="monthly" type="number" @bind="Salary.Monthly" @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
@@ -33,62 +33,62 @@
                             </div>
                         </div>
                         <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
-                            <label for="weekly" class="text-sm text-gray-500 ">Weekly</label>
+                            <label for="weekly" class="text-sm text-gray-500 ">Ukeslønn</label>
                             <div class="text-sm font-medium bg-gray-100 p-2 rounded-md">
                                 NOK
                                 <input  id="weekly" type="number" @bind="Salary.Weekly" @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
                                 <br/>
                                 @if (Salary.TaxRatePercent > 0)
                                 {
-                                    <small class="text-sm text-gray-500"><i>@Salary.WeeklyAfterTax after tax</i></small>
+                                    <small class="text-sm text-gray-500"><i>@Salary.WeeklyAfterTax etter skatt</i></small>
                                 }
                             </div>
                         </div>
                         <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
-                            <label for="daily" class="text-sm text-gray-500 ">Daily</label>
+                            <label for="daily" class="text-sm text-gray-500 ">Dagslønn</label>
                             <div class="text-sm font-medium bg-gray-100 p-2 rounded-md">
                                 NOK
                                 <input  id="daily" type="number" @bind="Salary.Daily" @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
                                 <br/>
                                 @if (Salary.TaxRatePercent > 0)
                                 {
-                                    <small class="text-sm text-gray-500"><i>@Salary.DailyAfterTax after tax</i></small>
+                                    <small class="text-sm text-gray-500"><i>@Salary.DailyAfterTax etter skatt</i></small>
                                 }
                             </div>
                         </div>
                         <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
-                            <div class="text-sm text-gray-500 ">Hourly</div>
+                            <div class="text-sm text-gray-500 ">Timelønn</div>
                             <div class="text-sm font-medium bg-gray-100 p-2 rounded-md">
                                 NOK
                                 <input type="number" @bind="Salary.Hourly" @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
                                 <br/>
                                 @if (Salary.TaxRatePercent > 0)
                                 {
-                                    <small class="text-sm text-gray-500"><i>@Salary.HourlyAfterTax after tax</i></small>
+                                    <small class="text-sm text-gray-500"><i>@Salary.HourlyAfterTax etter skatt</i></small>
                                 }
                             </div>
                         </div>
                         <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
-                            <label for="by-minute" class="text-sm text-gray-500 ">By Minute</label>
+                            <label for="by-minute" class="text-sm text-gray-500 ">Minuttlønn</label>
                             <div class="text-sm font-medium bg-gray-100 p-2 rounded-md">
                                 NOK
                                 <input  id="by-minute" type="number" @bind="Salary.ByMinute" @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
                                 <br/>
                                 @if (Salary.TaxRatePercent > 0)
                                 {
-                                    <small class="text-sm text-gray-500"><i>@Salary.ByMinuteAfterTax after tax</i></small>
+                                    <small class="text-sm text-gray-500"><i>@Salary.ByMinuteAfterTax etter skatt</i></small>
                                 }
                             </div>
                         </div>
                         <div class="flex items-center justify-between py-2 border-t border-gray-200 ">
-                            <label for="by-second" class="text-sm text-gray-500 ">By Second</label>
+                            <label for="by-second" class="text-sm text-gray-500 ">Sekundlønn</label>
                             <div class="text-sm font-medium bg-gray-100 p-2 rounded-md">
                                 NOK
                                 <input  id="by-second" type="number" @bind="Salary.BySecond" @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
                                 <br/>
                                 @if (Salary.TaxRatePercent > 0)
                                 {
-                                    <small class="text-sm text-gray-500"><i>@Salary.BySecondAfterTax after tax</i></small>
+                                    <small class="text-sm text-gray-500"><i>@Salary.BySecondAfterTax etter skatt</i></small>
                                 }
                             </div>
                         </div>
@@ -97,10 +97,10 @@
             </div>
             <div class="bg-white  border border-gray-200  shadow sm:rounded-lg w-full">
                 <div class="p-6 flex flex-col gap-4">
-                    <h2 class="text-lg font-medium sm:text-xl lg:text-2xl xl:text-3xl">Options</h2>
+                    <h2 class="text-lg font-medium sm:text-xl lg:text-2xl xl:text-3xl">Innstillinger</h2>
                     <div class="grid grid-cols-1 gap-2">
                         <div class="flex items-center justify-between py-2 border-t border-gray-200">
-                            <label for="tax-rate" class="text-sm text-gray-500 ">Effective tax rate</label>
+                            <label for="tax-rate" class="text-sm text-gray-500 ">Effektiv skatteprosent</label>
                             <div class="text-sm font-medium bg-gray-100 p-2 rounded-md">
                                 <input  id="tax-rate" type="number" @bind="Salary.TaxRatePercent" @bind:event="oninput" class="text-sm font-medium w-24 bg-gray-100">
                                 %
