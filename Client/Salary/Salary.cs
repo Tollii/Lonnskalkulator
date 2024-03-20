@@ -1,4 +1,4 @@
-﻿namespace BlazorBasic.Salary;
+﻿namespace SalaryCalculator.Salary;
 
 public class Salary(decimal yearly)
 {
